@@ -152,7 +152,7 @@ except ValueError as e:
 
 
 #10.Safe Calculator
-#Create a simple calculator (add, subtract, multiply, divide) that takes input from the user. Handle errors like invalid input, division by zero, etc.
+#Createe a simple calculator (add, subtract, multiply, divide) that takes input from the user. Handle errors like invalid input, division by zero, etc.
 try:
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
