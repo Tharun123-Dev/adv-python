@@ -76,16 +76,16 @@ except mysql.connector.errors.ProgrammingError as e:
 
 #using functions given of this
 
-def insertSingleRow(data):
-  try:
+# def insertSingleRow(data):
+#   try:
 
-     insertquery="""insert into students (name,email,course,joined_date) values (%s,%s,%s,%s)"""
-     cursor.executemany(insertquery,data)
-  except:
-   print("something went wrong")
-insertSingleRow([("shanmukh",'shanmukh@gmail.com','PFS',"2025-05-06"),
-         ('Tharunn','tharunn@gmail.com',"PFS",'2025-05-06'),
-         ('saranya','saranya2gmail.com','PFS',"2025-05-06")])
+#      insertquery="""insert into students (name,email,course,joined_date) values (%s,%s,%s,%s)"""
+#      cursor.executemany(insertquery,data)
+#   except:
+#    print("something went wrong")
+# insertSingleRow([("shanmukh",'shanmukh@gmail.com','PFS',"2025-05-06"),
+#          ('Tharunn','tharunn@gmail.com',"PFS",'2025-05-06'),
+#          ('saranya','saranya2gmail.com','PFS',"2025-05-06")])
 
 
 # # #getting all records from table
@@ -163,7 +163,90 @@ insertSingleRow([("shanmukh",'shanmukh@gmail.com','PFS',"2025-05-06"),
 #       print("not deleted")
 # delete("DS")
 
+# #fetch limited record
+def getLimitedRecords(limit):
+   try:
+      query="""select * from students limit %s"""
+      cursor.execute(query,(limit,))
+      result=cursor.fetchall()
 
+    #   print(result)
+      for i in result:
+         print(i)
+   except:
+      print("something went wrong")
+   finally:
+      print("task completed")
+getLimitedRecords(int(input("enter a number: ")))
+
+# #order by name
+# def order(limit):
+#    try:
+#       query="""select * from students  order by name asc limit %s"""
+#       cursor.execute(query,(limit,))
+#       result=cursor.fetchall()
+
+
+#       print(result)
+#       for i in result:
+#          print(i)
+#    except:
+#       print("something went wrong")
+#    finally:
+#       print("task completed")
+# order(2)
+
+
+# #update course by email
+
+# def updatecourse(new_course,email):
+#    try:
+#       query="""update students set course=%s where email=%s"""
+#       cursor.execute(query,(new_course,email))
+#     #   result=cursor.fetchall()
+#       print("update succesfully")
+
+
+#     #   print(result)
+#     #   for i in result:
+#         #  print(i)
+#    except:
+#       print("something went wrong")
+# #    finally:
+#     #   print("task completed")
+# updatecourse("JFS","saranya2@gmail.com")
+
+# #update name by course
+# def updatenamebycourse(new_name,new_course,email):
+#    try:
+#       query="""update students set name=%s,course=%s where email=%s"""
+#       cursor.execute(query,(new_name,new_course,email))
+#    except:
+#       print("something went wrong")
+# updatenamebycourse("rishi","DS","Tharunn@gmail.com")
+
+
+#delete from id 
+# def deleteRecordbyId(id):
+#    try:
+#       query="""delete from students where id=%s"""
+#       cursor.execute(query,(id,))
+#       print("deleted")
+#    except:
+#       print("something went wrong")
+# deleteRecordbyId(10)
+
+#delete record by email
+def deleteRecordbyId(email):
+   try:
+      query="""delete from students where email=%s"""
+      r=cursor.execute(query,(email,))
+      print("deleted")
+   except:
+      print("something went wrong")
+deleteRecordbyId("shannu@gmail.com")  
+
+   
 
 #we want to commit and close of conn
 conn.commit()
