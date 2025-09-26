@@ -3,24 +3,24 @@
 
 import re
 #pancard checking first five characters and then numbers four digits and last one must and should last one--one character
-regex=r"^[A-z]{5}+[0-9]{4}+[A-Z]{1}$"
+# regex=r"^[A-z]{5}+[0-9]{4}+[A-Z]{1}$"
 
-op=re.search(regex,"THARU1234R")
-if op:
-    print("valid")
-else:
-    print("not")
+# op=re.search(regex,"THARU1234R")
+# if op:
+#     print("valid")
+# else:
+#     print("not")
 
 #method 2
-import re
+# import re
 
-regex = r"[A-Z]{5}[0-9]{4}[A-Z]"
+# regex = r"[A-Z]{5}[0-9]{4}[A-Z]"
 
-op = re.fullmatch(regex, "THARU1234R")
-if op:
-    print("valid")
-else:
-    print("not")
+# op = re.fullmatch(regex, "THARU1234R")
+# if op:
+#     print("valid")
+# else:
+#     print("not")
 
 
 # regex=r"p.t"
@@ -49,6 +49,7 @@ else:
 #     print("not valid gmail")
 
 
+
 # # \d----0-9
 # regex=r"\d"
 # op=re.search(regex,"nani123")
@@ -58,9 +59,18 @@ else:
 #     print("not valid ")
 
 
-# \w----(a-z,A-Z,0-9,underscore)
+regex=r"^hdfc\d+$"
+op=re.search(regex,"hdfc123")
+if op:
+    print("valid")
+else:
+    print("invalid")
+
+
+
+# # \w----(a-z,A-Z,0-9,underscore)
 # regex=r"\w"
-# op=re.search(regex,"nan_i123")
+# op=re.search(regex,"hello123_4")
 # if op:
 #     print("valid ")
 # else:
@@ -137,13 +147,27 @@ else:
 #     print("not valid ")
 
 #pancard checking first five characters and then numbers four digits and last one must and should last one--one character
-regex=r"^[A-z]{5}+[0-9]{4}+[A-Z]{1}$"
+# regex=r"^[A-z]{5}+[0-9]{4}+[A-Z]{1}$"
 
-op=re.search(regex,"THARU1234R")
-if op:
-    print("valid")
-else:
-    print("not")
+# op=re.search(regex,"THARU1234R")
+# if op:
+#     print("valid")
+# else:
+#     print("not")
+
+# ##input from user
+# import re
+
+# regex = r'^[A-Z]{5}[0-9]{4}[A-Z]$'
+
+
+# pan = input("Enter PAN Number: ").upper()
+
+# if re.fullmatch(regex, pan):
+#     print("Valid PAN Number")
+# else:
+#     print("Invalid PAN Number")
+
 
 
 
