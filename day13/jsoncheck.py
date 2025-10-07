@@ -27,9 +27,9 @@
 
 #example for file
 
-import json
+# import json
 
-list=['harish','kiran','vikas']
+# list=['harish','kiran','vikas']
 # with open('products.json','w') as f:
 #     # data_json=json.dumps(list)
 #     data_json=str(list)
@@ -54,7 +54,7 @@ list=['harish','kiran','vikas']
 
 #remove any name
 
-with open('products.py','r') as f:
-    ins=json.loads(f)
+# with open('products.py','r') as f:
+#     ins=json.loads(f)
     
-    f.read(ins)
+#     f.read(ins)
