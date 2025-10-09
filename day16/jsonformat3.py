@@ -43,12 +43,11 @@ adding_element=input("enter fruit: ")
 with open(file_name,"r") as f:
     data=json.load(f)
     if user in data["user"] :
-     if adding_element not in data["fruits"]:
+     if adding_element in data["fruits"]:
         print(f"{adding_element} already exist ")
      else:
         data["fruits"].append(adding_element)
-        print("remove succesfully")
-        print("user authorised")
+        print("user authorised for adding")
     else:
        print("u re not authorised to perform adding operations")
 
