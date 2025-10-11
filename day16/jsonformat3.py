@@ -36,21 +36,23 @@ ip=["apple","banana","grapes"]
 # with open (file_name,"w") as f:
 #     json.dump(data,f)
 
-#adding operation only authorised persons
-file_name="file4.json"
-user="nani"
-adding_element=input("enter fruit: ")
-with open(file_name,"r") as f:
-    data=json.load(f)
-    if user in data["user"] :
-     if adding_element in data["fruits"]:
-        print(f"{adding_element} already exist ")
-     else:
-        data["fruits"].append(adding_element)
-        print("user authorised for adding")
-    else:
-       print("u re not authorised to perform adding operations")
+# #adding operation only authorised persons
+# file_name="file4.json"
+# user="nani"
+# adding_element=input("enter fruit: ")
+# with open(file_name,"r") as f:
+#     data=json.load(f)
+#     if user in data["user"] :
+#      if adding_element in data["fruits"]:
+#         print(f"{adding_element} already exist ")
+#      else:
+#         data["fruits"].append(adding_element)
+#         print("user authorised for adding")
+#     else:
+#        print("u re not authorised to perform adding operations")
 
-# #then see
-with open (file_name,"w") as f:
-    json.dump(data,f)
+# # #then see
+# with open (file_name,"w") as f:
+#     json.dump(data,f)
+
+
