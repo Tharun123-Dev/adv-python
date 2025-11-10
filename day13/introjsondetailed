@@ -2,7 +2,16 @@
 # it is text format(in strings) for data interchange between the systems
 # security and realiability
 # it common datatype among the programming languages
-#
+# trough API--only use json files stored
+
+
+#--its has a module--Json
+#--while sending python--->json
+#dumps
+
+#while recieving json->json
+#.json
+
 
 
 

@@ -11,4 +11,3 @@
 #     for key,value  in nani.items():
 #         print(f"{key}:{value}")
 # arg(name="nani",age=10)
-#
